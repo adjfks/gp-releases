@@ -1,6 +1,6 @@
 # 观盘 · A 股复盘
 
-本地优先的 macOS / Windows 复盘桌面应用。本仓库仅用于官方安装包、版本说明与更新清单，不包含应用源码或个人复盘数据。
+本地优先的 macOS / Windows 复盘桌面应用。本仓库用于官方网站、官方安装包、版本说明与更新清单，不包含桌面应用源码或个人复盘数据。
 
 [下载最新版本](https://github.com/adjfks/gp-releases/releases/latest)
 
@@ -14,3 +14,24 @@
 个人复盘和股票缓存保存在本机；升级涉及数据结构变化时先备份。免费行情源可能延迟或不可用，不构成投资建议。
 
 当前安装包未做 Apple Developer 公证和 Windows 代码签名。自动更新另有 Tauri 签名校验。
+
+## 官方网站
+
+[访问观盘官网](https://adjfks.github.io/gp-releases/)
+
+官网位于 `docs/`，以 GitHub Pages 发布 `main` 分支的 `/docs` 目录。纯 HTML / CSS / JavaScript，无需安装构建依赖；提交官网变更后自动部署。
+
+- 介绍实际已实现的产品功能，提供明确标注的交互示意。
+- 页面访问时从 GitHub 公开 Release API 获取正式版本、文件大小和三个平台的安装包地址；发布新版安装包后无需修改官网版本号。
+- 查询超时、网络失败、缺少附件或禁用 JavaScript 时保留 Release 下载入口。
+- 网站不包含账户、统计追踪或个人复盘上传功能；浏览器仍会向 GitHub 请求网页和公开版本信息。
+- `DESIGN.md` 记录视觉方向与交互状态。
+
+本地检查与预览：
+
+```sh
+npm run check
+npm run preview
+```
+
+预览地址为 `http://127.0.0.1:4176/`。新增文件不得包含个人数据库、备份、访问令牌或私有桌面源码。

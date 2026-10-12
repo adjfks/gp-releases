@@ -1,0 +1,9 @@
+{
+  "name": "guanpan-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --test scripts/*.test.mjs",
+    "preview": "python3 -m http.server 4176 --directory docs --bind 127.0.0.1"
+  }
+}
