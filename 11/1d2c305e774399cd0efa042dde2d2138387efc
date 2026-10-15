@@ -1,0 +1,25 @@
+docs/style.css
+  s_8941590df9e4b3::t_7c0613015536df 752-768
+VALIDATION.md
+  s_8941590df9e4b3::t_7c0613015536df 12-13
+DESIGN.md
+  s_8941590df9e4b3::t_7c0613015536df 23
+docs/index.html
+  s_8941590df9e4b3::t_7c0613015536df 464-472
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.49-trip",
+  "base_commit_sha": "111d2c305e774399cd0efa042dde2d2138387efc",
+  "prompts": {},
+  "sessions": {
+    "s_8941590df9e4b3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0f569-7473-70a3-84a0-30e4c2aa1daf",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "ptsu <ptsu@trip.com>"
+    }
+  }
+}
