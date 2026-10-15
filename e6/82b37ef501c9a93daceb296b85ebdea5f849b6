@@ -1,0 +1,19 @@
+docs/index.html
+  s_8941590df9e4b3::t_c8f79d5933d00c 25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.49-trip",
+  "base_commit_sha": "e682b37ef501c9a93daceb296b85ebdea5f849b6",
+  "prompts": {},
+  "sessions": {
+    "s_8941590df9e4b3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0f569-7473-70a3-84a0-30e4c2aa1daf",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "ptsu <ptsu@trip.com>"
+    }
+  }
+}
