@@ -20,4 +20,4 @@
 
 ## 发布约束
 
-网站源码属于公开 gp-releases 仓库，桌面源码仍私有。此次网站变更待 v0.0.9 安装包公开后部署，避免提前宣传未发布的新功能。GitHub Pages 当前由 main 的 docs 目录部署。
+网站源码属于公开 gp-releases 仓库，桌面源码仍私有。网站已按用户要求直接发布，GitHub Pages 由 main 的 docs 目录部署。v0.0.9 Mac 手动安装包在独立的先行下载区展示；完整三平台版本仍走 Latest，直到 Windows 和原更新签名产物齐备后再切换。

@@ -749,6 +749,23 @@ h2 {
   color: var(--muted);
   margin-top: 20px;
 }
+.staged-release {
+  margin-top: 24px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-left: 3px solid #c64338;
+  border-radius: 7px;
+  background: #fff9;
+}
+.staged-release strong { font-size: 16px; }
+.staged-release p {
+  margin: 10px 0 16px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.staged-release > div { display: flex; flex-wrap: wrap; gap: 16px 28px; }
+.staged-release .text-link { font-size: 13px; }
 .release-status {
   font-size: 11px;
   color: #6c785f;

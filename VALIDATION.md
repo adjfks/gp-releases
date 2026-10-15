@@ -9,4 +9,5 @@
 - prefers-reduced-motion 模拟检查：视差 transform 为 none，平滑滚动为 auto；验收后恢复默认媒体偏好。
 - 关闭脚本重新加载：13 项介绍仍存在，首图与 Release 下载入口可用；验收后恢复脚本并重新加载。
 - 控制台未观察到错误或警告。滚动不被接管，动效使用 requestAnimationFrame 与一次性 IntersectionObserver。
-- 官网变更暂不推送：等待 v0.0.9 安装包发布后，再触发 GitHub Pages 部署。当前安装包构建因 GitHub 账户付款/预算限制未启动，仍需账户所有者处理。
+- 官网已按用户要求直接发布，GitHub Pages 构建成功，线上页面标题和功能介绍已核对。
+- v0.0.9 两个 Mac DMG 改用本机编译，磁盘镜像、应用版本、CPU 架构及上传摘要检查通过。新增 Mac 先行版下载区，Windows 新版待补充；保留 v0.0.8 为 Latest，避免破坏完整三平台自动更新入口。
