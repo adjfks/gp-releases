@@ -7,13 +7,13 @@
     <title>观盘—你的复利日记</title>
     <meta
       name="description"
-      content="观盘，你的复利日记。为 A 股收盘复盘打造的本地桌面工作台：收盘归类、涨停时序、题材梯队、观察池、买卖判断卡和复盘长图。支持 macOS 与 Windows。"
+      content="观盘，你的复利日记。为 A 股收盘复盘打造的本地桌面工作台：收盘归类、涨停时序、题材梯队、观察池、买卖判断卡和复盘长图。当前更新 Windows，Mac 历史版本仍可下载。"
     />
     <link rel="canonical" href="https://adjfks.github.io/gp-releases/" />
     <meta property="og:title" content="观盘—你的复利日记" />
     <meta
       property="og:description"
-      content="把每一天的观察，积累成自己的判断。macOS / Windows 本地复盘工作台。"
+      content="把每一天的观察，积累成自己的判断。支持 Markdown 笔记、历史首板晋级 PK 与收盘归类的本地工作台。"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://adjfks.github.io/gp-releases/" />
@@ -22,7 +22,7 @@
       content="https://adjfks.github.io/gp-releases/assets/screenshots/closing.png"
     />
     <link rel="icon" href="./assets/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="./style.css?v=20261015-mac" />
+    <link rel="stylesheet" href="./style.css?v=20261020-notes" />
     <script type="module" src="./site.js"></script>
   </head>
   <body>
@@ -71,7 +71,7 @@
                 >
               </div>
               <p class="hero-meta">
-                macOS & Windows <i></i> 本机保存 <i></i> 无需注册
+                Windows 当前版 <i></i> 本机保存 <i></i> 无需注册
               </p>
             </div>
             <div class="hero-note">
@@ -102,7 +102,7 @@
         </div>
         <div class="product-caption">
           <span>从市场事实，到自己的判断。</span
-          ><span>13 个复盘页面 / 一处专注的工作台</span>
+          ><span>记录、归类与回测 / 一处专注的工作台</span>
         </div>
       </section>
       <section class="philosophy wrap" id="philosophy">
@@ -139,8 +139,13 @@
               <h2>从收盘，到下一次开盘。</h2>
             </div>
             <p>
-              每个功能，都有一个清晰的位置。<br />选择下方功能，查看实际应用界面。
+              从 Markdown 笔记到历史首板晋级 PK，持续完善你的复盘流程。<br />下方保留 13 张基础页面演示截图，部分界面早于当前版本。
             </p>
+          </div>
+          <div class="latest-features" aria-label="近期功能更新">
+            <article><span class="eyebrow">v0.0.18 / 复盘笔记</span><h3>主帖写判断，跟帖记变化。</h3><p>主帖与跟帖支持 Markdown 编辑、预览和格式化展示，提供加粗、标题、列表与引用快捷按钮。跟帖可重新编辑，保留原楼层和发布时间；支持搜索、置顶与本机保存。</p><small>识别正文中的股票名称和代码，点击请求打开 Windows 同花顺分时。需先启动同花顺；当前已验证 PC 9.60.80。</small></article>
+            <article><span class="eyebrow">历史首板晋级 PK</span><h3>回看同板，比较次日晋级。</h3><p>选择基准日首板股，查找历史首板日期，对比当日其他首板股曾经同板时的次交易日收盘晋级情况。回测历史与结果保存在本机，随时回看。</p><small>日线支持新浪、东方财富、搜狐和腾讯兜底。历史覆盖有缺口，缺失证据单列待核验，不把缺数据当成未晋级，也不承诺未来胜率。</small></article>
+            <article><span class="eyebrow">收盘归类</span><h3>批量整理，一眼看清关键指标。</h3><p>粘贴多只股票名称或代码，一键加入分组；点击首次或最终涨停排序，直接整理整个分组。卡片同排展示“首”“终”时间，补充炸板次数、公司业务和涨停原因。</p><small>保留分组拖拽、备注加粗、撤销与图片导出。业务介绍为当前公司资料，涨停解读标注来源与对应日期。</small></article>
           </div>
           <div id="screen-preview" class="screen-preview">
             <div class="screen-description">
@@ -171,7 +176,7 @@
             </div>
           </div>
           <p class="screenshot-note">
-            以下为应用实际组件运行截图，采自浏览器预览。内容使用演示数据；不包含用户个人复盘记录，不代表实时行情。
+            以下 13 张为较早版本实际组件的浏览器预览截图，尚未包含新增笔记与回测页面；当前功能以文字说明与版本说明为准。截图使用演示数据，不包含个人记录或实时行情。
           </p>
           <p id="screen-status" class="screenshot-note" role="status"></p>
           <div class="feature-grid">
@@ -459,45 +464,18 @@
           >
         </div>
         <p class="download-copy">
-          选择与你的电脑匹配的版本。安装后，即可开始第一篇复盘。
+          Windows 用户下载当前版；Mac 用户可查看历史版，恢复更新后另行说明。
         </p>
-        <aside class="staged-release" aria-label="v0.0.9 手动安装包下载">
-          <strong>v0.0.9 · Mac 与 Windows 手动安装包已发布</strong>
-          <p>新增涨停时序选股与分组名单复制。Mac 下载 DMG，Windows x64 下载 EXE（MSI 见发布页）；安装前请备份数据并退出应用。下方保留 v0.0.8 完整三平台版本与原自动更新入口。</p>
-          <div>
-            <a class="text-link" href="https://github.com/adjfks/gp-releases/releases/download/v0.0.9/macos-arm64-GuanPan_0.0.9_aarch64.dmg">下载 Apple Silicon 0.0.9 ↗</a>
-            <a class="text-link" href="https://github.com/adjfks/gp-releases/releases/download/v0.0.9/macos-x64-GuanPan_0.0.9_x64.dmg">下载 Intel Mac 0.0.9 ↗</a>
-            <a class="text-link" href="https://github.com/adjfks/gp-releases/releases/download/v0.0.9/windows-x64-GuanPan_0.0.9_x64-setup.exe">下载 Windows 0.0.9 ↗</a>
-            <a class="text-link" href="https://github.com/adjfks/gp-releases/releases/tag/v0.0.9">说明与校验和 ↗</a>
-          </div>
+        <aside class="staged-release" aria-label="当前发布安排">
+          <strong>Windows v0.0.18 · Markdown 笔记与跟帖编辑</strong>
+          <p>当前仅更新 Windows x64，EXE 与 MSI 均已发布，更新包使用原私钥签名。Mac 暂缓更新至稳定版；下方 Mac 链接为历史 v0.0.10，不包含后续新增功能。</p>
+          <a class="text-link" href="https://github.com/adjfks/gp-releases/releases/tag/v0.0.18">查看 v0.0.18 更新说明 ↗</a>
         </aside>
         <p id="release-status" class="release-status" role="status">
           安装包托管于 GitHub · 可在发布页查看最新版本
         </p>
         <div class="download-grid">
-          <article>
-            <span class="platform-symbol" aria-hidden="true">⌘</span>
-            <h3>macOS <small>Apple Silicon</small></h3>
-            <p>M 系列芯片 · macOS 12 或更新版本</p>
-            <a
-              class="button download-button"
-              data-download="mac-arm"
-              href="https://github.com/adjfks/gp-releases/releases/latest"
-              >查看 Mac ARM 下载 <span aria-hidden="true">↗</span></a
-            ><small data-size="mac-arm">DMG 安装包</small>
-          </article>
-          <article>
-            <span class="platform-symbol" aria-hidden="true">⌘</span>
-            <h3>macOS <small>Intel</small></h3>
-            <p>Intel 芯片 · macOS 12 或更新版本</p>
-            <a
-              class="button download-button"
-              data-download="mac-intel"
-              href="https://github.com/adjfks/gp-releases/releases/latest"
-              >查看 Mac Intel 下载 <span aria-hidden="true">↗</span></a
-            ><small data-size="mac-intel">DMG 安装包</small>
-          </article>
-          <article>
+<article>
             <span class="windows-symbol" aria-hidden="true"
               ><i></i><i></i><i></i><i></i
             ></span>
@@ -506,9 +484,31 @@
             <a
               class="button download-button"
               data-download="windows"
-              href="https://github.com/adjfks/gp-releases/releases/latest"
-              >查看 Windows 下载 <span aria-hidden="true">↗</span></a
+              href="https://github.com/adjfks/gp-releases/releases/download/v0.0.18/windows-x64-GuanPan_0.0.18_x64-setup.exe"
+              >下载 Windows EXE <span aria-hidden="true">↗</span></a
             ><small data-size="windows">EXE 安装包 · 发布页另有 MSI</small>
+          </article>
+<article>
+            <span class="platform-symbol" aria-hidden="true">⌘</span>
+            <h3>macOS <small>Apple Silicon</small></h3>
+            <p>M 系列芯片 · macOS 12 或更新版本</p>
+            <a
+              class="button download-button"
+              data-legacy-download="mac-arm"
+              href="https://github.com/adjfks/gp-releases/releases/tag/v0.0.10"
+              >查看 Mac ARM 历史版 <span aria-hidden="true">↗</span></a
+            ><small data-size="mac-arm">v0.0.10 · 历史 DMG · 暂缓更新</small>
+          </article>
+<article>
+            <span class="platform-symbol" aria-hidden="true">⌘</span>
+            <h3>macOS <small>Intel</small></h3>
+            <p>Intel 芯片 · macOS 12 或更新版本</p>
+            <a
+              class="button download-button"
+              data-legacy-download="mac-intel"
+              href="https://github.com/adjfks/gp-releases/releases/tag/v0.0.10"
+              >查看 Mac Intel 历史版 <span aria-hidden="true">↗</span></a
+            ><small data-size="mac-intel">v0.0.10 · 历史 DMG · 暂缓更新</small>
           </article>
         </div>
         <div class="download-help">
@@ -579,8 +579,7 @@
               有手机端或网页版吗？<span aria-hidden="true">+</span>
             </summary>
             <p>
-              目前提供 macOS 和 Windows
-              桌面应用。这个网站用于介绍与下载，不是在线复盘工作台；暂未提供手机应用。
+              目前维护 Windows 桌面版，Mac 提供历史版本。这个网站用于介绍与下载，不是在线复盘工作台；暂未提供手机应用。
             </p>
           </details>
           <details>
@@ -588,12 +587,10 @@
               如何更新？下载失败怎么办？<span aria-hidden="true">+</span>
             </summary>
             <p>
-              v0.0.3
-              及以上支持在应用左下角检查、下载并安装更新，安装前会自动备份。如果
-              GitHub 下载暂时不可达，可稍后重试，或从<a
+              Windows 可在应用内检查更新，安装前会自动备份。当前下载有 5 分钟总时限，约 212 MB 的离线安装包在慢速网络下可能超时；“下载或签名校验失败”不一定是签名错误。此时请用浏览器从<a
                 href="https://github.com/adjfks/gp-releases/releases/latest"
                 >完整发布页</a
-              >选择安装包。源码仓库不公开，公开仓库提供官网、安装包和更新文件。
+              >下载 EXE，退出应用后安装升级，无需卸载旧版。Mac 暂不提供新版本自动更新。源码仓库不公开，公开仓库提供官网、安装包和更新文件。
             </p>
           </details>
         </div>

@@ -22,6 +22,7 @@ async function loadRelease() {
     };
     for (const [key, download] of Object.entries(release.downloads)) {
       const a = document.querySelector(`[data-download="${key}"]`);
+      if (!a) continue;
       a.href = download.url;
       a.textContent = `下载 ${download.format}  ↓`;
       a.setAttribute(
@@ -31,8 +32,8 @@ async function loadRelease() {
       document.querySelector(`[data-size="${key}"]`).textContent =
         `${release.version} · ${download.size}${key === "windows" ? " · 含 WebView2 运行环境" : ""}`;
     }
-    const complete = Object.keys(release.downloads).length === 3;
-    status.textContent = `${release.version} 正式版${complete ? " · 点击下方按钮下载安装包" : " · 部分附件暂不可用，可前往发布页查看"}`;
+    const complete = Boolean(release.downloads.windows);
+    status.textContent = `${release.version} 正式版${complete ? " · Windows 当前版可下载，Mac 暂缓更新" : " · Windows 附件暂不可用，请前往发布页查看"}`;
     status.dataset.error = String(!complete);
   } catch {
     status.textContent =
