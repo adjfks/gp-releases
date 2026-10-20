@@ -1,5 +1,4 @@
 import { API_URL, parseRelease } from "./release.js";
-import { screens } from "./screens.js";
 const status = document.getElementById("release-status");
 async function loadRelease() {
   status.textContent = "正在获取最新版本与安装包信息…";
@@ -45,76 +44,6 @@ async function loadRelease() {
 }
 void loadRelease();
 
-// 真实界面截图切换；网络失败保留原图与原始图片链接。
-const screen = document.getElementById("feature-screen");
-const screenLink = document.getElementById("screen-link");
-const cards = [...document.querySelectorAll("[data-screen]")];
-let selected = 0;
-const imageStatus = document.getElementById("screen-status");
-let request = 0;
-function selectScreen(card) {
-  const id = card.dataset.screen,
-    item = screens[id],
-    token = ++request;
-  imageStatus.textContent = `正在读取${item.name}截图…`;
-  document.getElementById("screen-preview").setAttribute("aria-busy", "true");
-  const pending = new Image();
-  pending.onload = () => {
-    if (token !== request) return;
-    selected = cards.indexOf(card);
-    screen.src = pending.src;
-    screen.alt = `${item.name}实际应用界面截图`;
-    screenLink.href = pending.src;
-    screenLink.dataset.zoom = item.name;
-    screenLink.setAttribute("aria-label", `放大查看${item.name}截图`);
-    document.querySelector(".screen-count").textContent =
-      `${String(selected + 1).padStart(2, "0")} / 13`;
-    document.querySelector(".screen-name").textContent = item.name;
-    document.getElementById("screen-title").textContent = item.title;
-    document.getElementById("screen-copy").textContent = item.description;
-    document.querySelector(".screen-tags").textContent = item.tags;
-    cards.forEach((c) => c.setAttribute("aria-pressed", String(c === card)));
-    imageStatus.textContent = `已显示${item.name}截图`;
-    document.getElementById("screen-preview").removeAttribute("aria-busy");
-    document
-      .getElementById("screen-preview")
-      .scrollIntoView({
-        behavior: motion.matches ? "instant" : "smooth",
-        block: "start",
-      });
-  };
-  pending.onerror = () => {
-    if (token !== request) return;
-    imageStatus.textContent = `${item.name}截图暂未加载成功，保留当前截图，请再次点击重试。`;
-    document.getElementById("screen-preview").removeAttribute("aria-busy");
-  };
-  pending.src = `./assets/screenshots/${id}.png`;
-}
-cards.forEach((card) =>
-  card.addEventListener("click", () => selectScreen(card)),
-);
-const dialog = document.getElementById("image-dialog"),
-  dialogImage = document.getElementById("dialog-image");
-let imageTrigger;
-document.querySelectorAll("[data-zoom]").forEach((link) =>
-  link.addEventListener("click", (event) => {
-    if (!dialog.showModal) return;
-    event.preventDefault();
-    imageTrigger = link;
-    document.getElementById("image-dialog-title").textContent =
-      link.dataset.zoom + " · 实际界面";
-    dialogImage.src = link.href;
-    dialogImage.alt = link.dataset.zoom + "实际界面截图";
-    dialog.showModal();
-  }),
-);
-document
-  .getElementById("close-image")
-  .addEventListener("click", () => dialog.close());
-dialog.addEventListener("click", (event) => {
-  if (event.target === dialog) dialog.close();
-});
-dialog.addEventListener("close", () => imageTrigger?.focus());
 // 渐进增强：不劫持滚轮，不循环播放，不影响无 JS 阅读。
 const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
 let frame = 0;
