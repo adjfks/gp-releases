@@ -51,3 +51,15 @@ test("草稿、预发布、错误结构不冒充正式版本", () => {
   ])
     assert.throws(() => parseRelease(data));
 });
+
+test("官网功能卡与模块说明逐项一致，更新失败时仍可打开最新发布页", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const { screens } = await import("../docs/screens.js");
+  const html = await readFile(new URL("../docs/index.html", import.meta.url), "utf8");
+  const cards = [...html.matchAll(/<article class="feature-card" id="page-([^"]+)"[^>]*>([\s\S]*?)<\/article>/g)];
+  assert.deepEqual(cards.map(([, id]) => id), Object.keys(screens));
+  for (const [, id, markup] of cards) {
+    for (const text of Object.values(screens[id])) assert.ok(markup.includes(text), id);
+  }
+  assert.match(html, /data-download="windows"\s+href="https:\/\/github\.com\/adjfks\/gp-releases\/releases\/latest"/);
+});

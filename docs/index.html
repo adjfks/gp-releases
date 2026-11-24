@@ -7,22 +7,22 @@
     <title>观盘—你的复利日记</title>
     <meta
       name="description"
-      content="观盘，你的复利日记。为 A 股收盘复盘打造的本地桌面工作台：收盘归类、复盘笔记、涨停时序、回测、常用网站与数据源设置。当前更新 Windows，Mac 历史版本仍可下载。"
+      content="观盘，你的复利日记。为 A 股收盘复盘打造的本地桌面工作台：收盘归类、涨停时序、异动监控、共同股东、多阶段晋级回测与股性分析。当前更新 Windows，Mac 历史版本仍可下载。"
     />
     <link rel="canonical" href="https://adjfks.github.io/gp-releases/" />
     <meta property="og:title" content="观盘—你的复利日记" />
     <meta
       property="og:description"
-      content="把每一天的观察，积累成自己的判断。支持 Markdown 笔记、历史首板晋级 PK 与收盘归类的本地工作台。"
+      content="把每一天的观察，积累成自己的判断。按日期对齐盘中变化，回看个股的连板轮次、断板回撤与同板晋级记录。"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://adjfks.github.io/gp-releases/" />
     <meta
       property="og:image"
-      content="https://adjfks.github.io/gp-releases/assets/screenshots/closing.png"
+      content="https://adjfks.github.io/gp-releases/assets/screenshots/character-v0022.png"
     />
     <link rel="icon" href="./assets/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="./style.css?v=20261020-notes" />
+    <link rel="stylesheet" href="./style.css?v=20261124-workspace" />
     <script type="module" src="./site.js"></script>
   </head>
   <body>
@@ -81,11 +81,14 @@
           </div>
         </div>
       </section>
-      <section class="hero-product wrap" aria-label="六个核心页面">
-        <div class="product-frame" data-parallax>
-          <div class="frame-bar"><span><i></i> 观盘 / 你的复盘工作台</span><span>v0.0.19 · Windows</span></div>
-          <div class="workspace-overview"><div class="overview-intro"><span class="eyebrow">从整理，到验证</span><h2>六个页面，<br />专注每天的复盘。</h2><p>默认从收盘归类开始。<br />记录留在本机，判断由你完成。</p></div><div class="overview-pages"><a href="#page-closing"><span>01</span><strong>收盘归类</strong><small>把股票、数据和判断归在一起。</small></a><a href="#page-notes"><span>02</span><strong>复盘笔记</strong><small>主帖写判断，跟帖记变化。</small></a><a href="#page-intraday"><span>03</span><strong>涨停时序</strong><small>看清股票之间的先后反应。</small></a><a href="#page-backtest"><span>04</span><strong>回测</strong><small>回看历史同板，核对次日晋级。</small></a><a href="#page-bookmarks"><span>05</span><strong>常用网站</strong><small>常用资料，随手就能找到。</small></a><a href="#page-settings"><span>06</span><strong>数据源设置</strong><small>按需配置，补齐复盘数据。</small></a></div></div>
-        </div><div class="product-caption"><span>从市场事实，到自己的判断。</span><span>记录、归类与回测 / 一处专注的工作台</span></div>
+      <section class="hero-product wrap" aria-label="股性分析界面预览">
+        <figure class="product-frame" data-parallax>
+          <figcaption class="frame-bar"><span><i></i> 股性分析 / 历史快照</span><a href="./assets/screenshots/character-v0022.png">查看原图</a></figcaption>
+          <a class="app-preview" href="./assets/screenshots/character-v0022.png" aria-label="查看股性分析大图">
+            <img src="./assets/screenshots/character-v0022.png" width="1320" height="875" alt="股性分析界面以日期列出六轮演示记录，显示最高四板，并标记了开盘涨停后重挫的一轮。" />
+          </a>
+        </figure>
+        <div class="product-caption"><span>观盘 v0.0.22 实际界面 · 演示数据</span><span>选择一轮记录，回看连板与断板日表现。</span></div>
       </section>
       <section class="philosophy wrap" id="philosophy">
         <div class="section-marker" data-reveal>01 / 让积累，发生在每一天</div>
@@ -114,9 +117,46 @@
         </div>
       </section>
       <section class="feature-section" id="features"><div class="wrap">
-        <div class="section-heading" data-reveal><div><span class="section-marker">02 / 六个页面，一套复盘流程</span><h2>从收盘，到下一次开盘。</h2></div><p>整理股票，留下判断，再回到历史中核验。<br />当前 Windows 版围绕这六个页面展开。</p></div>
-        <div class="feature-grid current-pages"><article class="feature-card" id="page-closing" data-reveal><div class="feature-top"><span>01</span><span>收盘归类</span></div><h3>把股票、数据和判断归在一起。</h3><p>粘贴多个股票名称或代码，一键加入分组。卡片展示首终涨停时间、炸板次数、竞价指标、公司业务、当前省份与涨停原因；每个分组都能写下自己的判断。</p><span class="feature-tags">分组与全页排序 / 取消恢复手动顺序 / 完整备注导图</span></article><article class="feature-card" id="page-notes" data-reveal><div class="feature-top"><span>02</span><span>复盘笔记</span></div><h3>主帖写判断，跟帖记变化。</h3><p>主帖与跟帖支持 Markdown 编辑、预览和格式化展示，跟帖可重新修改；支持搜索、置顶与本机保存。识别正文中的股票名称或代码，点击请求打开 Windows 同花顺分时。</p><span class="feature-tags">Markdown / 跟帖编辑 / 股票跳转</span></article><article class="feature-card" id="page-intraday" data-reveal><div class="feature-top"><span>03</span><span>涨停时序</span></div><h3>看清股票之间的先后反应。</h3><p>把封板、开板与分钟放量节点放到同一条时间线上。按日期回看、补取缓存，也能只展示选中的股票，比较同一时刻的变化。事件先后不代表因果。</p><span class="feature-tags">分钟量能 / 事件对齐 / 按日选股</span></article><article class="feature-card" id="page-backtest" data-reveal><div class="feature-top"><span>04</span><span>回测</span></div><h3>回看历史同板，核对次日晋级。</h3><p>选择基准日首板股，查找历史首板日期，对比当日其他首板股曾经同板时的次交易日收盘晋级情况。回测历史与结果保存在本机，支持多接口兜底，缺失证据明确标记。</p><span class="feature-tags">历史首板晋级 PK / 历史记录 / 数据缺口提示</span></article><article class="feature-card" id="page-bookmarks" data-reveal><div class="feature-top"><span>05</span><span>常用网站</span></div><h3>常用资料，随手就能找到。</h3><p>收藏研究、公告与行情网站，自定义名称或读取网页标题。点击卡片，在系统浏览器打开；让复盘时需要的资料入口集中在一处。</p><span class="feature-tags">网址收藏 / 自动标题 / 系统浏览器</span></article><article class="feature-card" id="page-settings" data-reveal><div class="feature-top"><span>06</span><span>数据源设置</span></div><h3>按需配置，补齐复盘数据。</h3><p>管理可选数据接口及授权配置，查看接入说明。配置后按接口权限补充可用数据；免费源、权限与历史覆盖都有边界，缺失数据不会填成零。</p><span class="feature-tags">可选接口 / 授权配置 / 接入说明</span></article></div>
-        <p class="screenshot-note">地域与业务为公司当前资料；历史行情可能有缺口，回测不承诺未来胜率。股票跳转需先启动同花顺，当前已验证 PC 9.60.80。</p>
+        <div class="section-heading" data-reveal><div><span class="section-marker">功能全览</span><h2>从收盘整理，到历史核验。</h2></div><p>八个功能页和一个独立设置入口。<br />默认从收盘归类开始，也可以自选启动页。</p></div>
+        <div class="feature-grid current-pages">
+          <article class="feature-card" id="page-closing" data-reveal>
+            <span class="module-name">收盘归类</span><h3>收盘后，按自己的思路整理股票。</h3>
+            <p>从当日涨停池拖入自定义分组，也可搜索或批量补充个股。卡片并排展示连板标签、竞价与收盘指标，能标重点、写个股和分组备注，再把整张分组图复制出来。</p><span class="feature-tags">拖拽归类 · 卡片排序 · 复制分组图</span>
+          </article>
+          <article class="feature-card" id="page-notes" data-reveal>
+            <span class="module-name">复盘笔记</span><h3>把收盘时的判断和次日反馈放在一起。</h3>
+            <p>用 Markdown 写主帖，用跟帖记录后续变化。支持搜索、置顶和编辑；点击识别到的股票可请求打开 Windows 同花顺分时。</p><span class="feature-tags">Markdown · 跟帖 · 个股跳转</span>
+          </article>
+          <article class="feature-card" id="page-intraday" data-reveal>
+            <span class="module-name">涨停时序</span><h3>对齐不同股票的封板、开板和放量时刻。</h3>
+            <p>按日期查看触板股票的分钟量能，可只显示自己选中的股票。获取数据时可先切到其他页面，回来继续查看同一天的进度。</p><span class="feature-tags">分钟量能 · 按日选股 · 本机存档</span>
+          </article>
+          <article class="feature-card" id="page-abnormal" data-reveal>
+            <span class="module-name">异动监控</span><h3>下一交易日，离最近的触发线还有多远？</h3>
+            <p>把个股加入监控名单，查看按收盘数据测算的普通和严重异动参考线。可调整指数涨跌假设，展开核对窗口、参考价格与数据缺口。</p><span class="feature-tags">监控名单 · 最近触发线 · 指数假设</span>
+          </article>
+          <article class="feature-card" id="page-shareholders" data-reveal>
+            <span class="module-name">共同股东</span><h3>哪些公司出现在同一位流通股东的持仓里？</h3>
+            <p>选定一只股票，从最新已披露的十大流通股东出发，查找共享股东的 A 股。逐项查看股东名称、关联股票与报告期，也可筛除结算托管账户。</p><span class="feature-tags">披露持仓 · 报告期 · 股东筛选</span>
+          </article>
+          <article class="feature-card" id="page-backtest" data-reveal>
+            <span class="module-name">回测</span><h3>上次同板相遇，谁在次日晋级？</h3>
+            <p>选择基准日的股票和首板到四板中的一档，按历史日期对照同板个股的次日表现。可回看本机历史记录，或把结果复制成图片。</p><span class="feature-tags">首进二至四进五 · 同板对照 · 结果导图</span>
+          </article>
+          <article class="feature-card" id="page-character" data-reveal>
+            <span class="module-name">股性分析</span><h3>一只股票走过几轮连板，断板后怎样收场？</h3>
+            <p>从首板开始，逐轮查看日期、最高板数与断板日涨跌幅。单独筛选开盘涨停后重挫、开盘即开板且未回封的记录，结合已核验样本查看评分，并回看分析快照。</p><span class="feature-tags">连板分布 · 骗炮核验 · 股性评分</span>
+          </article>
+          <article class="feature-card" id="page-bookmarks" data-reveal>
+            <span class="module-name">常用网站</span><h3>把公告、行情和研究入口收在一处。</h3>
+            <p>保存常用网址，可自定义名称，也可读取网页标题。下次复盘时，点击收藏卡片即可在系统浏览器打开。</p><span class="feature-tags">网址收藏 · 自动标题 · 系统浏览器</span>
+          </article>
+          <article class="feature-card" id="page-settings" data-reveal>
+            <span class="module-name">设置</span><h3>管理启动页、行情来源与备份。</h3>
+            <p>选择启动时打开的页面，更新和搜索本机股票库，按需配置数据源授权。通过「数据与备份」导出复盘记录，换机时预览并合并导入。</p><span class="feature-tags">启动偏好 · 数据源 · 备份与迁移</span>
+          </article>
+        </div>
+        <p class="screenshot-note">行情和事件按数据源可核验的范围展示。异动参考线基于收盘测算，持仓以披露报告期为准。</p>
       </div></section>
       <section class="ownership">
         <div class="wrap ownership-layout">
@@ -191,9 +231,9 @@
           Windows 用户下载当前版；Mac 用户可查看历史版，恢复更新后另行说明。
         </p>
         <aside class="staged-release" aria-label="当前发布安排">
-          <strong>Windows v0.0.19 · 六页工作台 · 地域排序与分组备注</strong>
-          <p>当前仅更新 Windows x64，EXE 与 MSI 均已发布，更新包使用原私钥签名。Mac 暂缓更新至稳定版；下方 Mac 链接为历史 v0.0.10，不包含后续新增功能。</p>
-          <a class="text-link" href="https://github.com/adjfks/gp-releases/releases/tag/v0.0.19">查看 v0.0.19 更新说明 ↗</a>
+          <strong>本期更新 · 股性分析与历史快照</strong>
+          <p>v0.0.22 新增股性评分、断板日回撤与开盘下杀记录。读取行情期间可以继续切换页面。</p>
+          <a class="text-link" href="https://github.com/adjfks/gp-releases/releases/tag/v0.0.22">查看 v0.0.22 更新说明 ↗</a>
         </aside>
         <p id="release-status" class="release-status" role="status">
           安装包托管于 GitHub · 可在发布页查看最新版本
@@ -208,8 +248,8 @@
             <a
               class="button download-button"
               data-download="windows"
-              href="https://github.com/adjfks/gp-releases/releases/download/v0.0.19/windows-x64-GuanPan_0.0.19_x64-setup.exe"
-              >下载 Windows EXE <span aria-hidden="true">↗</span></a
+              href="https://github.com/adjfks/gp-releases/releases/latest"
+              >前往 Windows 下载页 <span aria-hidden="true">↗</span></a
             ><small data-size="windows">EXE 安装包 · 发布页另有 MSI</small>
           </article>
 <article>
@@ -295,7 +335,7 @@
               断网、换电脑后，记录还在吗？<span aria-hidden="true">+</span>
             </summary>
             <p>
-              记录保存在本机，断网仍可填写复盘、查看已有缓存。换电脑时使用应用内「导出备份」和「合并导入」，不要直接覆盖运行中的数据库。备份含个人记录且未加密，请妥善保管。目前不支持跨设备自动同步。
+              记录保存在本机，断网仍可填写复盘、查看已有缓存。换电脑时，可在设置中导出收盘归类、笔记、收藏和已支持的行情存档，再到新电脑合并导入。股性分析与回测历史保存在各自的本机档案中，当前不包含在这份迁移文件内。
             </p>
           </details>
           <details>
@@ -311,7 +351,7 @@
               如何更新？下载失败怎么办？<span aria-hidden="true">+</span>
             </summary>
             <p>
-              Windows 可在应用内检查更新，安装前会自动备份。当前下载有 5 分钟总时限，约 212 MB 的离线安装包在慢速网络下可能超时；“下载或签名校验失败”不一定是签名错误。此时请用浏览器从<a
+              Windows 可在应用内检查更新，安装前会自动备份。如果网络中断或应用内下载超时，可用浏览器从<a
                 href="https://github.com/adjfks/gp-releases/releases/latest"
                 >完整发布页</a
               >下载 EXE，退出应用后安装升级，无需卸载旧版。Mac 暂不提供新版本自动更新。源码仓库不公开，公开仓库提供官网、安装包和更新文件。

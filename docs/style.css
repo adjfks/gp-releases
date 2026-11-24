@@ -1444,3 +1444,16 @@ dialog > p {
 
 /* 当前六页概览 */
 .workspace-overview{display:grid;grid-template-columns:1fr 1.6fr;gap:40px;padding:50px;background:#faf9f7}.overview-intro h2{font-size:clamp(28px,4vw,48px);line-height:1.3;margin:18px 0}.overview-intro p{color:#777;line-height:1.9}.overview-pages{display:grid;grid-template-columns:1fr 1fr;gap:12px}.overview-pages a{display:flex;flex-direction:column;gap:9px;padding:22px;background:#fff;border:1px solid #e8e3df;border-radius:8px;text-decoration:none;color:inherit}.overview-pages a:hover{border-color:#b82d38}.overview-pages span{color:#b82d38;font-size:11px}.overview-pages strong{font-size:18px}.overview-pages small{color:#777;line-height:1.7}.current-pages .feature-card{cursor:default;scroll-margin-top:100px}.current-pages .feature-card h3{font-size:21px}.current-pages .feature-top{display:flex;justify-content:space-between;gap:12px}.current-pages .feature-top span:last-child{font-size:14px;color:#9d343b}@media(max-width:800px){.workspace-overview{grid-template-columns:1fr;padding:25px;gap:24px}.overview-pages a{padding:16px}}@media(max-width:420px){.overview-pages{grid-template-columns:1fr}}
+
+.hero-product figure { margin: 0; }
+.frame-bar a { color: inherit; text-underline-offset: 3px; }
+.app-preview, .app-preview img { display: block; width: 100%; }
+.app-preview img { height: auto; }
+.current-pages .module-name { color: #943e36; font-size: .875rem; font-weight: 650; }
+.current-pages .feature-card h3 { margin: .8rem 0; line-height: 1.45; }
+.current-pages .feature-card p { font-size: .95rem; color: #4e574e; line-height: 1.8; }
+.current-pages .feature-tags, #features .screenshot-note { font-size: .8rem; }
+@media (max-width: 620px) {
+  .current-pages { grid-template-columns: minmax(0, 1fr); }
+  .current-pages .feature-card { padding: 22px; }
+}
